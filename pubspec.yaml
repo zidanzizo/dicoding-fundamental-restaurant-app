@@ -1,0 +1,35 @@
+name: dicoding_fundamental_restaurant
+description: A new Flutter project.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.5 <4.0.0'
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  flutter:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  google_fonts: ^6.1.0
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  change_app_package_name: ^1.1.0
+  flutter_test:
+    sdk: flutter
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/resto-bg.png"
+  min_sdk_android: 21 
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/local_restaurant.json
+    - assets/images/
