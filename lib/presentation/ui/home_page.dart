@@ -91,6 +91,29 @@ class HomePage extends StatelessWidget {
     );
   }
 
+  Padding _buildTitleText(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 10, 10, 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Restaurant',
+            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
+          Text(
+            'Recommendation restauran for you',
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  color: Colors.black54,
+                ),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -101,26 +124,7 @@ class HomePage extends StatelessWidget {
             final List<Restaurant> restaurants = parseRestaurant(snapshot.data);
             return ListView(
               children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 10, 10, 10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Restaurant',
-                        style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                      Text(
-                        'Recommendation restauran for you',
-                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                              color: Colors.black54,
-                            ),
-                      ),
-                    ],
-                  ),
-                ),
+                _buildTitleText(context),
                 ListView.builder(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
