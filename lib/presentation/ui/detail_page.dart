@@ -56,34 +56,7 @@ class _DetailPageState extends State<DetailPage> {
                           widget.restaurant.pictureId,
                           fit: BoxFit.cover,
                         ));
-                  })
-
-// FlexibleSpaceBar(
-//                         collapseMode: CollapseMode.parallax,
-//                         centerTitle: true,
-//                         title: AnimatedContainer(
-//                           duration: const Duration(milliseconds: 300),
-//                           child: Text(
-//                             widget.restaurant.name,
-//                             style: Theme.of(context).textTheme.titleMedium!.copyWith(
-//                                   color: primaryColor,
-//                                 ),
-//                           ),
-//                         ),
-//                         background: Image.network(
-//                           widget.restaurant.pictureId,
-//                           fit: BoxFit.cover,
-//                         ))
-
-                  // flexibleSpace: FlexibleSpaceBar(
-                  //   background: Image.network(
-                  //     restaurant.pictureId,
-                  //     fit: BoxFit.fitWidth,
-                  //   ),
-                  //   title: Text(restaurant.name),
-                  //   titlePadding: const EdgeInsets.only(left: 16, bottom: 16),
-                  // ),
-                  ),
+                  })),
             ];
           },
           body: SingleChildScrollView(
